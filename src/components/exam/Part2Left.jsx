@@ -26,7 +26,7 @@ function HeadingSlot({ num, answers, setAnswer }) {
     <div
       onDragOver={onDragOver}
       onDrop={onDrop}
-      className="border border-dashed border-gray-500 rounded-sm px-2 py-1 my-2 min-h-7 flex items-center justify-center text-center text-[13px] bg-white"
+      className="border border-dashed border-gray-500 rounded-sm   my-2 min-h-7 flex items-center justify-center text-center text-[17px] font-bold bg-white"
     >
       {value ? (
         <span
@@ -35,7 +35,7 @@ function HeadingSlot({ num, answers, setAnswer }) {
             e.dataTransfer.setData("text/heading", value);
             e.dataTransfer.effectAllowed = "move";
           }}
-          className="bg-white border border-gray-400 rounded-sm px-2 py-0.5 cursor-pointer"
+          className="bg-white px-2  cursor-pointer "
           onClick={clear}
           title="Click to remove"
         >
@@ -51,11 +51,11 @@ function HeadingSlot({ num, answers, setAnswer }) {
 export default function Part2Left({ answers, setAnswer }) {
   return (
     <>
-      <h2 className="font-bold text-[16px] mb-4">The Physics of Traffic Behavior</h2>
+      <h2 className="font-bold text-[17px] mb-4">The Physics of Traffic Behavior</h2>
 
       <HeadingSlot num={14} answers={answers} setAnswer={setAnswer} />
 
-      <div className="space-y-4 leading-[1.6] text-[14px] sm:text-[15px]">
+      <div className="space-y-4 leading-[1.5] text-[17px] text-black ">
         <p>
           Some years ago, when several theoretical physicists, principally Dirk Helbing and Boris
           Kerner of Stuttgart, Germany, began publishing papers on traffic flow in publications

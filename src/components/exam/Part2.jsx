@@ -54,7 +54,7 @@ function DraggableHeading({ text, used }) {
     <div
       draggable
       onDragStart={(e) => e.dataTransfer.setData("text/heading", text)}
-      className={` border border-gray-500 rounded-sm px-2 py-0.5 my-1 font-bold mr-2 text-[13px] bg-white ${
+      className={` border border-gray-500 rounded-sm px-2  my-1 font-bold mr-2 text-[17px] font-bold bg-white ${
         used ? "opacity-40 cursor-grab hover:bg-gray-50" : "cursor-grab hover:bg-gray-50"
       }`}
     >
@@ -89,7 +89,7 @@ function CheckboxQuestion({ group, answers, setAnswer, setCurrentQ, registerQRef
       className="mb-6"
     >
       <div className="flex gap-2 items-start mb-2">
-        <span className="font-semibold text-[14px] text-[#1a5fb4]">{`${a}-${b}`}</span>
+        <span className="font-semibold text-[17px] ">{`${a}-${b}`}</span>
         <span className="leading-normal">{group.prompt}</span>
       </div>
       <div className="space-y-0.5">
@@ -120,12 +120,12 @@ export default function Part2({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         }}
         className="mb-6"
       >
-        <h3 className="font-bold text-[15px] mb-1">Questions 14-17</h3>
-        <p className="text-[14px] mb-3">
+        <h3 className="font-bold text-[17px] mb-1">Questions 14-17</h3>
+        <p className="text-[17px] mb-3">
           The text has four sections. Choose the correct heading for each section and move it into
           the gap.
         </p>
-        <p className="font-semibold text-[14px] mb-2">List of Headings</p>
+        <p className="font-semibold text-[17px] mb-2">List of Headings</p>
         <div
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
@@ -133,7 +133,7 @@ export default function Part2({ answers, setAnswer, currentQ, setCurrentQ, qRefs
             const heading = e.dataTransfer.getData("text/heading");
             if (heading) clearDroppedHeading(heading);
           }}
-          className="rounded-sm border border-dashed border-gray-300 bg-white p-1"
+          className=" bg-white p-1 pl-3"
           title="Drop a heading here to return it"
         >
           {HEADINGS.map((h) => (
@@ -142,8 +142,8 @@ export default function Part2({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         </div>
       </div>
 
-      <h3 className="font-bold text-[15px] mb-1 mt-6">Questions 18-23</h3>
-      <p className="text-[14px] mb-4">Choose TWO correct answers.</p>
+      <h3 className="font-bold text-[17px] mb-1 mt-6">Questions 18-23</h3>
+      <p className="text-[17px] mb-4">Choose <span className="font-bold">TWO</span> correct answers.</p>
 
       {CHECKBOX_GROUPS.map((g) => (
         <CheckboxQuestion
@@ -156,13 +156,13 @@ export default function Part2({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         />
       ))}
 
-      <h3 className="font-bold text-[15px] mb-1 mt-6">Questions 24-26</h3>
-      <p className="text-[14px] mb-4">
+      <h3 className="font-bold text-[17px] mb-1 mt-6">Questions 24-26</h3>
+      <p className="text-[17px] mb-4">
         Complete the summary. Write <strong>ONE WORD ONLY</strong> from the text for each answer.
       </p>
 
-      <h4 className="font-bold text-[14px] mb-3">Physicists' theories on gas molecules and traffic flow</h4>
-      <p className="leading-loose text-[14px]">
+      <h4 className="font-bold text-[18px] text-black mb-3">Physicists' theories on gas molecules and traffic flow</h4>
+      <p className=" text-[17px] ">
         Using simulations based on
         <NumberedInput num={24} answers={answers} setAnswer={setAnswer} qRefs={qRefs} currentQ={currentQ} setCurrentQ={setCurrentQ} />
         more commonly used to illustrate the movement of molecules in a gas, physicists showed that

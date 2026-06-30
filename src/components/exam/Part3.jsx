@@ -15,8 +15,8 @@ const TF_QUESTIONS = [
 export default function Part3({ answers, setAnswer, currentQ, setCurrentQ, qRefs }) {
   return (
     <>
-      <h3 className="font-bold text-[15px] mb-1">Questions 27-33</h3>
-      <p className="text-[14px] mb-4 leading-[1.6]">
+      <h3 className="font-bold text-[17px] mb-1">Questions 27-33</h3>
+      <p className="text-[17px] mb-4 leading-[1.5]">
         Choose <strong>TRUE</strong> if the statement agrees with the information given in the
         text, choose <strong>FALSE</strong> if the statement contradicts the information, or choose{" "}
         <strong>NOT GIVEN</strong> if there is no information on this.
@@ -66,13 +66,13 @@ export default function Part3({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         })}
       </div>
 
-      <h3 className="font-bold text-[15px] mb-1 mt-8">Questions 34-40</h3>
-      <p className="text-[14px] mb-4">
+      <h3 className="font-bold text-[17px] mb-1 mt-8">Questions 34-40</h3>
+      <p className="text-[17px] mb-4">
         Complete the summary. Write <strong>NO MORE THAN TWO WORDS</strong> from the text for each
         answer.
       </p>
 
-      <p className="leading-[2] text-[14px]">
+      <p className="leading-[1] text-[17px] ">
         For businesses, the use of complex language can have financial implications. The benefits
         of plain language can be seen in the case of companies who remove
         <NumberedInput num={34} answers={answers} setAnswer={setAnswer} qRefs={qRefs} currentQ={currentQ} setCurrentQ={setCurrentQ} />
@@ -81,7 +81,7 @@ export default function Part3({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         as a result.
       </p>
 
-      <p className="leading-[2] text-[14px] mt-4">
+      <p className="leading-[1] text-[17px]  mt-4">
         Consumers often complain that they experience a feeling of
         <NumberedInput num={36} answers={answers} setAnswer={setAnswer} qRefs={qRefs} currentQ={currentQ} setCurrentQ={setCurrentQ} />
         when trying to put together do-it-yourself products which have not been tested by companies
@@ -96,7 +96,7 @@ export default function Part3({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         .
       </p>
 
-      <p className="leading-[2] text-[14px] mt-4">
+      <p className="leading-[1] text-[17px]  mt-4">
         Lawyers, however, have raised objections to the use of plain English. They feel that it
         would result in ambiguity in documents and cause people to lose faith in
         <NumberedInput num={40} answers={answers} setAnswer={setAnswer} qRefs={qRefs} currentQ={currentQ} setCurrentQ={setCurrentQ} />
