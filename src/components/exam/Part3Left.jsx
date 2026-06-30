@@ -2,8 +2,8 @@
 export default function Part3Left() {
   return (
     <>
-      <h2 className="font-bold text-[16px] mb-4">Plain English</h2>
-      <div className="space-y-4 leading-[1.6] text-[14px] sm:text-[15px]">
+      <h2 className="font-bold text-[22px] mb-3">Plain English</h2>
+      <div className="space-y-4 leading-[1.5] text-[17px]">
         <p>
           There is no theoretical limit to the number of special purposes to which language can be
           put. As society develops new facets, so language is devised to express them. However, the
