@@ -42,18 +42,18 @@ export default function ExamFooter({
             return (
               <div
                 key={p.title}
-                className={`h-full flex items-center justify-center gap-2 px-2 hover:bg-gray-100 ${
-                  isActive ? "bg-gray-100" : ""
+                onClick={() => switchPart(idx)}
+                className={`h-full flex items-center justify-center gap-2 px-2 cursor-pointer hover:bg-gray-100 ${
+                  isActive ? "hover:bg-white" : ""
                 }`}
               >
-                <button
-                  onClick={() => switchPart(idx)}
+                <span
                   className={`text-[12px] font-semibold whitespace-nowrap ${
                     isActive ? "text-black" : "text-gray-500"
                   }`}
                 >
                   {p.title}
-                </button>
+                </span>
 
                 {isActive ? (
                   <div className="flex items-center gap-1 overflow-x-auto">
@@ -63,7 +63,7 @@ export default function ExamFooter({
                       return (
                         <button
                           key={label}
-                          onClick={() => scrollToQ(g[0])}
+                          onClick={(e) => { e.stopPropagation(); scrollToQ(g[0]); }}
                           className={`text-[13px] px-0.5 ${
                             isCur ? "text-[#1a5fb4] border border-[#1a5fb4] rounded-[2px]" : "text-black"
                           }`}
