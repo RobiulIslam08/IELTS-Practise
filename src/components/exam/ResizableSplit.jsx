@@ -67,12 +67,11 @@ export default function ResizableSplit({ left, right, rightColRef, className = "
       className={`flex-1 flex flex-row relative overflow-hidden min-h-0 inspera-split ${className}`}
     >
       <section
-        className={`overflow-y-auto border-r min-h-0 inspera-scroll bg-[#fdfdfd] transition-colors duration-150 ${
-          isHovering || isDragging ? "border-r-[#1a5fb4]" : "border-r-gray-300"
-        }`}
+        className={`overflow-y-auto border-r min-h-0 inspera-scroll bg-[#fdfdfd] transition-colors duration-150 ${isHovering || isDragging ? "border-r-[#1a5fb4]" : "border-r-gray-300"
+          }`}
         style={{ width: `${leftPct}%` }}
       >
-        <div className="px-4 sm:px-8 py-4 sm:py-6">{left}</div>
+        <div className="px-4  py-9">{left}</div>
       </section>
 
       <div
@@ -84,16 +83,14 @@ export default function ResizableSplit({ left, right, rightColRef, className = "
         style={{ left: `${leftPct}%`, width: 24 }}
       >
         <div
-          className={`flex items-center justify-center w-[20px] h-[30px] border bg-white shadow-sm transition-colors duration-150 rounded-[2px] ${
-            isHovering || isDragging
-              ? "border-[#1a5fb4] bg-blue-50/10"
-              : "border-gray-300"
-          }`}
+          className={`flex items-center justify-center w-[20px] h-[30px] border border-1 bg-white shadow-sm transition-colors mb-10  duration-150 rounded-[2px] ${isHovering || isDragging
+            ? "border-[#1a5fb4] bg-blue-50/10"
+            : "border-gray-500"
+            }`}
         >
           <ArrowLeftRight
-            className={`h-[12px] w-[12px] transition-colors duration-150 ${
-              isHovering || isDragging ? "text-[#1a5fb4] stroke-[2.5]" : "text-gray-500 stroke-[2]"
-            }`}
+            className={`h-[12px] w-[12px] transition-colors duration-150 ${isHovering || isDragging ? "text-[#1a5fb4] stroke-[2.5]" : "text-gray-800 stroke-[2]"
+              }`}
           />
         </div>
       </div>
@@ -103,8 +100,9 @@ export default function ResizableSplit({ left, right, rightColRef, className = "
         className="overflow-y-auto min-h-0 inspera-scroll"
         style={{ width: `${100 - leftPct}%` }}
       >
-        <div className="px-4 sm:px-8 py-4 sm:py-6">{right}</div>
+        <div className="px-4  py-9 ">{right}</div>
       </section>
     </main>
   );
 }
+
