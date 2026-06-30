@@ -3,7 +3,7 @@ export default function Part1Left() {
   return (
     <>
       <h2 className="font-bold text-[18px] mb-4">The life and work of Marie Curie</h2>
-      <div className="space-y-4 leading-[1.7] text-[14px] sm:text-[15px]">
+      <div className="space-y-4 leading-[1.5] text-[17px]  text-black">
         <p>
           Marie Curie is probably the most famous woman scientist who has ever lived. Born Maria
           Sklodowska in Poland in 1867, she is famous for her work on radioactivity, and was twice a

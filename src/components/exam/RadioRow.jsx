@@ -4,7 +4,7 @@ export default function RadioRow({ name, value, label, selected, onSelect }) {
   const isSel = selected === value;
   return (
     <label
-      className={`relative flex items-center gap-2 pl-3 pr-3 py-[6px] cursor-pointer text-[13px] leading-tight mb-1 transition-colors duration-150 ${
+      className={`relative flex items-center gap-2 pl-3 pr-3 py-[10px] cursor-pointer text-[17px] leading-tight mb-1 transition-colors duration-150 ${
         isSel ? "bg-[#cfe0f5] " : "hover:bg-gray-50 border-l-[3px] border-transparent"
       }`}
     >

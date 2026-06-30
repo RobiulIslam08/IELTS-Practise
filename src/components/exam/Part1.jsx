@@ -56,11 +56,11 @@ const NOTE_QUESTIONS = [
 export default function Part1({ answers, setAnswer, currentQ, setCurrentQ, qRefs }) {
   return (
     <>
-      <h3 className="font-bold text-[15px] mb-1">Questions 1-6</h3>
-      <p className="mb-4 leading-[1.5] text-[13px] text-gray-800">
-        Choose TRUE if the statement agrees with the information given in the
-        text, choose FALSE if the statement contradicts the information, or choose{" "}
-        NOT GIVEN if there is no information on this.
+      <h3 className="font-bold text-[17px] mb-1">Questions 1-6</h3>
+      <p className="mb-4 leading-[1.5] text-[17px] text-black">
+        Choose <strong className="font-bold">TRUE</strong> if the statement agrees with the information given in the
+        text, choose <strong className="font-bold">FALSE</strong> if the statement contradicts the information, or choose{" "}
+        <strong className="font-bold">NOT GIVEN</strong> if there is no information on this.
       </p>
 
       <div className="space-y-5">
@@ -85,7 +85,7 @@ export default function Part1({ answers, setAnswer, currentQ, setCurrentQ, qRefs
                 >
                   {num}
                 </span>
-                <span className="leading-[1.4] text-[14px] font-medium text-gray-900 mt-[1px]">{q}</span>
+                <span className="leading-[1.4] text-[17px] font-medium text-black mt-[1px]">{q}</span>
               </div>
               <div>
                 {["TRUE", "FALSE", "NOT GIVEN"].map((opt) => (
@@ -107,13 +107,13 @@ export default function Part1({ answers, setAnswer, currentQ, setCurrentQ, qRefs
         })}
       </div>
 
-      <h3 className="font-bold text-[15px] mb-1 mt-8">Questions 7-13</h3>
-      <p className="mb-4 text-[14px]">
+      <h3 className="font-bold text-[17px] mb-1 mt-8">Questions 7-13</h3>
+      <p className="mb-4 text-[17px]">
         Complete the notes. Write <strong>ONE WORD ONLY</strong> from the text for each answer.
       </p>
-      <h4 className="font-bold text-[14px] mb-3">Marie Curie's research on radioactivity</h4>
+      <h4 className="font-bold text-[17px] mb-3">Marie Curie's research on radioactivity</h4>
 
-      <ul className="space-y-0.5 text-[14px] leading-[1.9] list-disc pl-5">
+      <ul className="space-y-0.5 text-[17px] leading-[1.5] list-disc pl-5">
         {NOTE_QUESTIONS.map((q) => (
           <li key={q.num}>
             {q.before}{" "}
