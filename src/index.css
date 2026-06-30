@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap");
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --border: oklch(0.929 0.013 255.508);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.5;
+    overflow: hidden; /* Prevent default page scrollbar */
+  }
+}
+
+/* === Inspera-like scrollbar (slim, dark thumb) === */
+.inspera-scroll::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+.inspera-scroll::-webkit-scrollbar-track {
+  background: #fcfcfc;
+  border-left: 1px solid #e5e5e5;
+}
+.inspera-scroll::-webkit-scrollbar-thumb {
+  background: #8e8e8e;
+  border-radius: 0;
+}
+.inspera-scroll::-webkit-scrollbar-thumb:hover {
+  background: #6e6e6e;
+}
+.inspera-scroll {
+  scrollbar-color: #8e8e8e #fcfcfc;
+  scrollbar-width: auto;
+  overflow-y: scroll;
+}
+
+@media (max-width: 900px) {
+	.inspera-split {
+		flex-direction: column;
+	}
+
+	.inspera-split > section {
+		width: 100% !important;
+	}
+
+	.inspera-resize {
+		display: none;
+	}
+}
