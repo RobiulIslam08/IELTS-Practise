@@ -4,7 +4,7 @@ import { FaVolumeHigh } from "react-icons/fa6";
 
 export default function ExamHeader() {
   return (
-    <header className="flex items-center justify-between px-4 py-3 shrink-0 mb-2">
+    <header className="flex items-center justify-between px-4 py-3 shrink-0 mb-2  border-b">
       <div className="flex items-center gap-6 sm:gap-10">
          <div className="flex items-center font-black">
               <img className="w-20 object-contain md:w-[96px]" src="/ielts.svg" alt="" />

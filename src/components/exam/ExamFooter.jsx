@@ -47,7 +47,7 @@ export default function ExamFooter({
                   }`}
               >
                 <span
-                  className={`text-[12px] font-semibold whitespace-nowrap ${isActive ? "text-black" : "text-gray-500"
+                  className={`text-[17px] text-black  whitespace-nowrap ${isActive ? "text-black" : "text-gray-700"
                     }`}
                 >
                   {p.title}
@@ -62,7 +62,7 @@ export default function ExamFooter({
                         <button
                           key={label}
                           onClick={(e) => { e.stopPropagation(); scrollToQ(g[0]); }}
-                          className={`text-[13px] px-0.5 ${isCur ? "text-[#1a5fb4] border border-[#1a5fb4] rounded-[2px]" : "text-black"
+                          className={`text-[17px] cursor-pointer hover:border hover:border-[#1a5fb4]     px-0.5 ${isCur ? "text-[#1a5fb4] border border-[#1a5fb4] rounded-[2px]" : "text-black"
                             }`}
                         >
                           {label}
@@ -71,7 +71,7 @@ export default function ExamFooter({
                     })}
                   </div>
                 ) : (
-                  <span className="text-gray-500 text-[13px] whitespace-nowrap">
+                  <span className="text-gray-500 text-[17px] whitespace-nowrap">
                     {countAnswered(idx)} of {p.end - p.start + 1}
                   </span>
                 )}
